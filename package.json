@@ -1,5 +1,5 @@
 {
-  "name": "urbangreensiteweb",
+  "name": "atlas-verde-siteweb",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@turf/turf": "^7.3.4",
+    "leaflet": "^1.9.4",
+    "leaflet.heat": "^0.2.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },
