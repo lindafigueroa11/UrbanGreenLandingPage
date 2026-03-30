@@ -466,6 +466,12 @@
   margin: 0;
 }
 
+.founderCredit {
+  font-size: 0.95rem;
+  color: rgba(27, 94, 32, 0.78);
+  font-weight: 500;
+}
+
 .footer nav {
   display: flex;
   justify-content: center;

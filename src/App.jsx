@@ -4,6 +4,7 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { distance, point } from '@turf/turf'
 import styles from './App.module.css'
+import { FOUNDER_CREDIT_SHORT } from './siteMeta.js'
 
 const playStoreLink = 'https://play.google.com/'
 const logoPath = '/urban-green-logo.png'
@@ -678,6 +679,9 @@ function App() {
               información en tiempo real y tomar decisiones para cuidar mejor los
               espacios naturales dentro de las ciudades.
             </p>
+            <p>
+              <strong>{FOUNDER_CREDIT_SHORT}</strong>
+            </p>
           </div>
         </section>
 
@@ -736,6 +740,7 @@ function App() {
 
       <footer className={styles.footer}>
         <p>Urban green © 2026</p>
+        <p className={styles.founderCredit}>{FOUNDER_CREDIT_SHORT}</p>
         <nav aria-label="Navegación secundaria">
           <Link to="/#inicio">Inicio</Link>
           <Link to="/#mapa">Mapa</Link>

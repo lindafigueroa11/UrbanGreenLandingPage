@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import appStyles from './App.module.css'
 import styles from './TermsPage.module.css'
+import { FOUNDER_CREDIT_SHORT, FOUNDER_SENTENCE } from './siteMeta.js'
 
 const logoPath = '/urban-green-logo.png'
 
@@ -43,10 +44,10 @@ export default function TermsPage() {
             <h2>1. Identificación</h2>
             <p>
               Urban green es una plataforma digital orientada al monitoreo y cuidado
-              de espacios verdes urbanos. El responsable del tratamiento de datos y
-              la operación de la Aplicación será quien figure como titular en los
-              canales oficiales (sitio web, tienda de aplicaciones o avisos dentro
-              de la propia app).
+              de espacios verdes urbanos. {FOUNDER_SENTENCE}. El responsable del
+              tratamiento de datos y la operación de la Aplicación será quien figure
+              como titular en los canales oficiales (sitio web, tienda de aplicaciones
+              o avisos dentro de la propia app).
             </p>
           </section>
 
@@ -167,6 +168,7 @@ export default function TermsPage() {
 
       <footer className={appStyles.footer}>
         <p>Urban green © 2026</p>
+        <p className={appStyles.founderCredit}>{FOUNDER_CREDIT_SHORT}</p>
         <nav aria-label="Navegación secundaria">
           <Link to="/#inicio">Inicio</Link>
           <Link to="/#mapa">Mapa</Link>
