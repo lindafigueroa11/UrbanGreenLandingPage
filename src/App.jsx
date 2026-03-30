@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { distance, point } from '@turf/turf'
 import styles from './App.module.css'
 
 const playStoreLink = 'https://play.google.com/'
-const logoPath = '/atlas-verde-logo.png'
+const logoPath = '/urban-green-logo.png'
 const qrCodeUrl =
   'https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fplay.google.com%2F'
 
@@ -161,7 +162,7 @@ function DownloadActions() {
       <img
         className={styles.qrCode}
         src={qrCodeUrl}
-        alt="Código QR para descargar la aplicación Atlas verde"
+        alt="Código QR para descargar la aplicación Urban green"
         loading="lazy"
       />
     </div>
@@ -228,7 +229,7 @@ function MapSection() {
     mapRef.current = map
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap | Atlas verde',
+      attribution: '© OpenStreetMap | Urban green',
     }).addTo(map)
 
     const parkLayer = L.layerGroup().addTo(map)
@@ -350,7 +351,7 @@ function MapSection() {
   }, [parks])
 
   const handleSendReport = () => {
-    window.alert('Reporte enviado a Atlas verde.')
+    window.alert('Reporte enviado a Urban green.')
     setIssueDesc('')
     setSelectedReportPark('')
     setIssueType('basura')
@@ -626,15 +627,15 @@ function App() {
   return (
     <div className={styles.page}>
       <header className={styles.topBar}>
-        <a className={styles.brand} href="#inicio">
-          <img src={logoPath} alt="Logo Atlas verde" />
-        </a>
+        <Link className={styles.brand} to="/#inicio">
+          <img src={logoPath} alt="Logo Urban green" />
+        </Link>
         <nav aria-label="Navegación principal">
-          <a href="#inicio">Inicio</a>
-          <a href="#mapa">Mapa</a>
-          <a href="#acerca">Acerca de</a>
-          <a href="#caracteristicas">Características</a>
-          <a href="#descargar">Descargar</a>
+          <Link to="/#inicio">Inicio</Link>
+          <Link to="/#mapa">Mapa</Link>
+          <Link to="/#acerca">Acerca de</Link>
+          <Link to="/#caracteristicas">Características</Link>
+          <Link to="/#descargar">Descargar</Link>
         </nav>
       </header>
 
@@ -642,12 +643,12 @@ function App() {
         <section id="inicio" className={`${styles.section} ${styles.heroSection}`}>
           <div className={styles.heroContent}>
             <p className={styles.kicker}>Tecnología para una ciudad más verde</p>
-            <h1>Atlas verde</h1>
+            <h1>Urban green</h1>
             <h2 className={styles.heroSubtitle}>
               Conectando ciudades con la naturaleza.
             </h2>
             <p className={styles.heroDescription}>
-              Atlas verde es una plataforma que ayuda a monitorear, cuidar y
+              Urban green es una plataforma que ayuda a monitorear, cuidar y
               expandir los espacios verdes urbanos mediante tecnología, sensores
               ambientales y participación ciudadana.
             </p>
@@ -664,10 +665,10 @@ function App() {
         <MapSection />
 
         <section id="acerca" className={styles.section}>
-          <SectionTitle title="¿Qué es Atlas verde?" />
+          <SectionTitle title="¿Qué es Urban green?" />
           <div className={styles.aboutGrid}>
             <p>
-              Atlas verde es una iniciativa tecnológica enfocada en mejorar la
+              Urban green es una iniciativa tecnológica enfocada en mejorar la
               calidad ambiental de las ciudades. A través de sensores inteligentes
               y una aplicación móvil, se pueden monitorear variables ambientales
               como humedad del suelo, temperatura y estado de áreas verdes.
@@ -699,7 +700,7 @@ function App() {
         </section>
 
         <section id="caracteristicas" className={styles.section}>
-          <SectionTitle title="¿Qué puedes hacer con Atlas verde?" />
+          <SectionTitle title="¿Qué puedes hacer con Urban green?" />
           <div className={styles.featuresGrid}>
             {featureList.map((feature) => (
               <FeatureCard key={feature.title} {...feature} />
@@ -720,7 +721,7 @@ function App() {
           <div className={styles.downloadText}>
             <SectionTitle
               title="Descarga la aplicación"
-              description="Lleva Atlas verde en tu bolsillo y descubre el estado ambiental de los espacios verdes de tu ciudad."
+              description="Lleva Urban green en tu bolsillo y descubre el estado ambiental de los espacios verdes de tu ciudad."
             />
             <DownloadActions />
           </div>
@@ -734,13 +735,14 @@ function App() {
       </main>
 
       <footer className={styles.footer}>
-        <p>Atlas verde © 2026</p>
+        <p>Urban green © 2026</p>
         <nav aria-label="Navegación secundaria">
-          <a href="#inicio">Inicio</a>
-          <a href="#mapa">Mapa</a>
-          <a href="#acerca">Acerca de</a>
-          <a href="#caracteristicas">Características</a>
-          <a href="#descargar">Descargar</a>
+          <Link to="/#inicio">Inicio</Link>
+          <Link to="/#mapa">Mapa</Link>
+          <Link to="/#acerca">Acerca de</Link>
+          <Link to="/#caracteristicas">Características</Link>
+          <Link to="/#descargar">Descargar</Link>
+          <Link to="/terminos">Términos y condiciones</Link>
         </nav>
         <p>Construyendo ciudades más verdes.</p>
       </footer>

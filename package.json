@@ -1,5 +1,5 @@
 {
-  "name": "atlas-verde-siteweb",
+  "name": "urban-green-siteweb",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,7 +14,8 @@
     "leaflet": "^1.9.4",
     "leaflet.heat": "^0.2.0",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",

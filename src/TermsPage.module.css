@@ -1,0 +1,73 @@
+.main {
+  flex: 1;
+  padding: 2.5rem 1.25rem 4rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.article {
+  color: rgba(27, 94, 32, 0.92);
+}
+
+.meta {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(27, 94, 32, 0.65);
+}
+
+.title {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  letter-spacing: -0.02em;
+  color: #1b5e20;
+  line-height: 1.2;
+}
+
+.lead {
+  margin: 0 0 2rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.section {
+  margin-bottom: 1.75rem;
+}
+
+.section:last-of-type {
+  margin-bottom: 0;
+}
+
+.section h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.15rem;
+  color: #1b5e20;
+}
+
+.section p {
+  margin: 0 0 0.75rem;
+  line-height: 1.65;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+.section ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.35rem;
+  line-height: 1.65;
+}
+
+.section li {
+  margin-bottom: 0.45rem;
+}
+
+.section li:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 760px) {
+  .main {
+    padding: 3.5rem 2rem 5rem;
+  }
+}

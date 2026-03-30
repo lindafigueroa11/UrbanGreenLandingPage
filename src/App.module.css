@@ -1,5 +1,8 @@
 .page {
   color: #1b5e20;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .topBar {
