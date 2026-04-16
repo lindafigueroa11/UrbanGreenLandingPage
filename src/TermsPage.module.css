@@ -6,20 +6,20 @@
 }
 
 .article {
-  color: rgba(27, 94, 32, 0.92);
+  color: rgba(21, 101, 192, 0.92);
 }
 
 .meta {
   margin: 0 0 0.5rem;
   font-size: 0.9rem;
-  color: rgba(27, 94, 32, 0.65);
+  color: rgba(21, 101, 192, 0.65);
 }
 
 .title {
   margin: 0 0 1.25rem;
   font-size: clamp(1.75rem, 4vw, 2.25rem);
   letter-spacing: -0.02em;
-  color: #1b5e20;
+  color: #1565c0;
   line-height: 1.2;
 }
 
@@ -40,7 +40,7 @@
 .section h2 {
   margin: 0 0 0.65rem;
   font-size: 1.15rem;
-  color: #1b5e20;
+  color: #1565c0;
 }
 
 .section p {

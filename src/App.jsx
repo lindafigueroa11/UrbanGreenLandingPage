@@ -239,6 +239,7 @@ function MapSection() {
     parks.forEach((park) => {
       L.circleMarker(park.coords, {
         radius: 4,
+        // Verde reservado: espacios verdes / parques en el mapa
         color: '#2ed573',
         fillOpacity: 0.7,
       })
